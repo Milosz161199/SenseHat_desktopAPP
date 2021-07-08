@@ -18,6 +18,18 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+       
+        <!-- Title -->
+        <TextBlock
+            Background="#706F73"
+            Padding="10,20,10,20"
+            Grid.Row="0"
+            Grid.Column="0"
+            FontSize="20"
+            Foreground="Gray"
+            TextAlignment="Left"
+            VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,-0.4,0.4"
+            >LED Panel</TextBlock>
         <!-- Menu toggle button -->
         <Button 
             Grid.Row="0" Grid.Column="1"

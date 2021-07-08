@@ -32,10 +32,10 @@
                       Model="{Binding THPPlotModel}"  />
         <oxy:PlotView x:Name="DataPlotView2" 
                       Grid.Row="1"
-                      Model="{Binding THPPlotModel3}" Grid.Column="2"/>
+                      Model="{Binding THPPlotModel2}" Grid.Column="2"/>
         <oxy:PlotView x:Name="DataPlotView3" 
                       Grid.Row="1"
-                      Model="{Binding THPPlotModel2}" Grid.Column="3"/>
+                      Model="{Binding THPPlotModel3}" Grid.Column="3"/>
         <!-- Configuration: IoT server ip address and request sample time -->
         <Grid Grid.Row="2" Grid.Column="1">
             <Grid.ColumnDefinitions>

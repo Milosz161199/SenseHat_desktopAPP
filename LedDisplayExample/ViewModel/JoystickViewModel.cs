@@ -63,7 +63,7 @@ namespace LedDisplayExample.ViewModel
      
         public ButtonCommand StartButton { get; set; }
         public ButtonCommand StopButton { get; set; }
- 
+        public ButtonCommand RefreshButton { get; set; }
         #endregion
 
         #region Fields
@@ -148,7 +148,7 @@ namespace LedDisplayExample.ViewModel
           
             StartButton = new ButtonCommand(StartTimer);
             StopButton = new ButtonCommand(StopTimer);
-   
+            RefreshButton = new ButtonCommand(UpdatePlotWithServerResponse);
             ipAddress = config.IpAddress;
             sampleTime = config.SampleTime;
 
