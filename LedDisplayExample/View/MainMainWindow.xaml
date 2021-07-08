@@ -1,0 +1,60 @@
+﻿<Window x:Class="LedDisplayExample.View.MainMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LedDisplayExample.View"
+        mc:Ignorable="d"
+        Title="Desktop application" Height="450" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Menu toggle button -->
+        <Button 
+            Grid.Row="0" Grid.Column="1"
+            x:Name="MenuBtn" Click="MenuBtn_Click"
+            Width="62" HorizontalAlignment="Left" Margin="15,5">
+            Menu
+        </Button>
+
+        <!-- Menu grid -->
+        <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" 
+              x:Name="Menu"
+              Background="#706F73" Width="150" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                
+            </Grid.RowDefinitions>
+            <!--Menu buttons and image-->
+            <Image Width="100" Grid.Row="0" Source="/Media/Raspberry-Pi-logo.png" Margin="25,0,25,10.4" RenderTransformOrigin="0.576,1.532" />
+            <Button x:Name="btn_chart" Grid.Row="1" Width="100" Margin="5" IsEnabled="True" Click="Btn_chart_Click" >RPY GRAPH</Button>
+            <Button x:Name="btn_thp" Grid.Row="2" Width="100" Margin="5" IsEnabled="True" Click="Btn_thp_Click">THP GRAPH</Button>
+            <Button x:Name="btn_led" Grid.Row="3" Width="100" Margin="5" IsEnabled="True" Click="Btn_led_Click">LED</Button>
+            <Button x:Name="btn_config" Grid.Row="4" Width="100" Margin="5" IsEnabled="True" Click="Btn_config_Click">CONFIG</Button>
+            <Button x:Name="btn_joystick" Grid.Row="5" Width="100" Margin="5" IsEnabled="True" Click="Btn_joystick_Click">JOYSTICK</Button>
+            <Button x:Name="btn_list" Grid.Row="6" Width="100" Margin="5" IsEnabled="True" Click="Btn_list_Click">LIST</Button>
+
+        </Grid>
+        <!-- Configuration: IoT server ip address and request sample time -->
+        <!-- Bottom button menu: start data acquisition / stop data acquisition / update configuration -->
+        <Frame x:Name="frame" Content="Frame" HorizontalAlignment="Left"  Margin="15,22,0,10" Grid.Column="1" Grid.Row="1" Visibility="Visible" NavigationUIVisibility="Hidden"/>
+    </Grid>
+
+</Window>
+
