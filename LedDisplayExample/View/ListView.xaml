@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:LedDisplayExample.ViewModel"
         xmlns:local="clr-namespace:LedDisplayExample.View"
         mc:Ignorable="d"
-        Title="GraphView" Height="450" Width="800">
+        Title="GraphView" Height="700" Width="800">
 
     <Page.DataContext>
         <vm:ListViewModel/>

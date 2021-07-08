@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LedDisplayExample.View"
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="LED Display Control Example" Height="700" Width="800">
+        Title="LED Display Control Example" Height="450" Width="800">
     <Page.Resources>
         <Style x:Key="LedButtonStyle" TargetType="Button">
             <Setter Property="Margin" Value="2"/>

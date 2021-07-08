@@ -1,0 +1,124 @@
+﻿<Page x:Class="LedDisplayExample.View.ConfigView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LedDisplayExample.View"
+        xmlns:vm="clr-namespace:LedDisplayExample.ViewModel"
+        mc:Ignorable="d"
+        Title="ConfigView" Height="800" Width="650">
+    <Page.DataContext>
+        <vm:ConfigViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Grid Margin="59,339,61.6,412">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button 
+                Grid.Column="0" 
+                Height="30"
+                Width="120" 
+                Margin="15,10,0,10" 
+                Command="{Binding UpdateConfigButton}" HorizontalAlignment="Left" Content="UPDATE CONFIG"/>
+            <Button 
+                Grid.Column="1" 
+                Height="30"
+                Width="120" 
+                Margin="130,10,15,9" 
+                Command="{Binding DefaultConfigButton}" HorizontalAlignment="Left" Content="DEFAULT CONFIG" Grid.ColumnSpan="3"/>
+        </Grid>
+        <Grid Margin="0,0,0,655"/>
+        <Grid Margin="0,100,0,655">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock 
+                Grid.Column="0" 
+                Margin="20,15,0,14" 
+                Text="IP address: " VerticalAlignment="Center"/>
+            <TextBox 
+                Grid.Column="1" 
+                Margin="20,9,0,10" 
+                Width="100" 
+                HorizontalAlignment="Left" 
+                Text="{Binding IpAddress}"/>
+            
+        </Grid>
+
+        <Grid Margin="0,150,0,605">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock 
+                Grid.Column="0" 
+                Margin="20,15,0,14"  
+                Text="Sample time: " 
+                HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBox 
+                Grid.Column="1" 
+                Margin="100,9,0,10" 
+                Width="100" 
+                HorizontalAlignment="Left" 
+                Text="{Binding SampleTime}" RenderTransformOrigin="2.031,0.488"/>
+            <TextBlock
+                Grid.Column="1" 
+                Margin="214,15,0,14" 
+                Text=" ms"  
+                HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="-21.227,0.654" />
+        </Grid>
+
+        <Grid Margin="0,200,0,555">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock 
+                Grid.Column="0" 
+                Margin="20,15,0,14"  
+                Text="Max number of samples: " 
+                HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBox 
+                Grid.Column="1" 
+                Margin="158,9,0,10" 
+                Width="100" 
+                HorizontalAlignment="Left" 
+                Text="{Binding SampleMax}" RenderTransformOrigin="2.031,0.488"/>
+        </Grid>
+        <Grid Margin="0,250,0,505">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock 
+                Grid.Column="0" 
+                Margin="20,15,0,14"  
+                Text="API version: " 
+                HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+            <TextBox 
+                Grid.Column="1" 
+                Margin="100,9,0,10" 
+                Width="100" 
+                HorizontalAlignment="Left" 
+                Text="{Binding APIversion}" RenderTransformOrigin="2.031,0.488"/>
+        </Grid>
+
+    </Grid>
+</Page>

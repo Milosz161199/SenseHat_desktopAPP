@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LedDisplayExample.View"
         mc:Ignorable="d"
-        Title="Desktop application" Height="800" Width="1000">
+        Title="Desktop application" Height="450" Width="900">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -18,7 +18,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-
+       
         <!-- Title -->
         <TextBlock
             Background="#706F73"
@@ -51,21 +51,21 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-
+                
             </Grid.RowDefinitions>
             <!--Menu buttons and image-->
             <Image Width="100" Grid.Row="0" Source="/Media/Raspberry-Pi-logo.png" Margin="25,0,25,10.4" RenderTransformOrigin="0.576,1.532" />
             <Button x:Name="btn_chart" Grid.Row="1" Width="100" Margin="5" IsEnabled="True" Click="Btn_chart_Click" >RPY GRAPH</Button>
-            <Button x:Name="btn_thp" Grid.Row="2" Width="100" Margin="5" IsEnabled="True" Click="Btn_thp_Click">ENV GRAPH</Button>
+            <Button x:Name="btn_thp" Grid.Row="2" Width="100" Margin="5" IsEnabled="True" Click="Btn_thp_Click">THP GRAPH</Button>
             <Button x:Name="btn_led" Grid.Row="3" Width="100" Margin="5" IsEnabled="True" Click="Btn_led_Click">LED</Button>
-            <Button x:Name="btn_config" Grid.Row="6" Width="100" Margin="25,38,25,-28" IsEnabled="True" Click="Btn_config_Click">CONFIG</Button>
+            <Button x:Name="btn_config" Grid.Row="4" Width="100" Margin="5" IsEnabled="True" Click="Btn_config_Click">CONFIG</Button>
             <Button x:Name="btn_joystick" Grid.Row="5" Width="100" Margin="5" IsEnabled="True" Click="Btn_joystick_Click">JOYSTICK</Button>
             <Button x:Name="btn_list" Grid.Row="6" Width="100" Margin="5" IsEnabled="True" Click="Btn_list_Click">LIST</Button>
 
         </Grid>
         <!-- Configuration: IoT server ip address and request sample time -->
         <!-- Bottom button menu: start data acquisition / stop data acquisition / update configuration -->
-        <Frame x:Name="frame" Content="Frame" HorizontalAlignment="Left"  Margin="15,22,0,10" Grid.Column="1" Grid.Row="1" Visibility="Visible" NavigationUIVisibility="Hidden" Width="810"/>
+        <Frame x:Name="frame" Content="Frame" HorizontalAlignment="Left"  Margin="15,22,0,10" Grid.Column="1" Grid.Row="1" Visibility="Visible" NavigationUIVisibility="Hidden"/>
     </Grid>
 
 </Window>

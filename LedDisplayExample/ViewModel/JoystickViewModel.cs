@@ -94,8 +94,8 @@ namespace LedDisplayExample.ViewModel
         public PlotModel JoystickPlotModel { get; set; }
         public ButtonCommand StartTrackButton { get; set; }
         public ButtonCommand StopTrackButton { get; set; }
-        private uint min = 0;
-        private uint max = 25;
+        private int min = -40;
+        private int max = 40;
         JoystickData joystickData;
         #endregion
 

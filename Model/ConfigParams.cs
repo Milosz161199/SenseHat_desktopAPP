@@ -21,7 +21,7 @@ namespace LedDisplayExample.Model
         string configJSONstring = " ";
         string configJSONstring2 = " ";
 
-        static readonly string ipAddressDefault = "192.168.100.19";
+        static readonly string ipAddressDefault = "192.168.0.23";
         public string IpAddress;
         static readonly int sampleTimeDefault = 500;
         public int SampleTime;

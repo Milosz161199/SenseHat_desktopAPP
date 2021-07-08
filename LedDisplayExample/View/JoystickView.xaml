@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:LedDisplayExample.ViewModel"
         xmlns:local="clr-namespace:LedDisplayExample.View"
         mc:Ignorable="d"
-        Title="GraphView" Height="450" Width="800">
+        Title="GraphView" Height="700" Width="800">
     <Page.DataContext>
         <vm:JoystickViewModel/>
     </Page.DataContext>
@@ -37,8 +37,8 @@
             </Grid.RowDefinitions>
             <oxy:PlotView x:Name="DataPlotView_Joystick" 
                       Grid.Row="0" Grid.Column="1"
-                      Margin="10,15,10,15" 
-                      Model="{Binding JoystickPlotModel}" RenderTransformOrigin="0.49,0.426"/>
+                      Margin="10,15,245,10" 
+                      Model="{Binding JoystickPlotModel}" RenderTransformOrigin="0.49,0.426" Grid.ColumnSpan="3" FontSize="6"/>
             <Grid Grid.Row="0" Grid.Column="3">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -48,7 +48,7 @@
                 </Grid.RowDefinitions>
                 <TextBlock 
                 Grid.Column="0" 
-                Margin="0,54,102,278.8"  
+                Margin="0,184,40,409"  
                 Text="Middle counter"
                     FontSize="30"
                 HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3"/>
@@ -58,7 +58,7 @@
                     Text="{Binding Path=JoystickCounter,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    FontSize="150"/>
+                    FontSize="100" Margin="218,229,102,204"/>
             </Grid>
         </Grid>
         <Grid Grid.Row="4" Grid.Column="0">
